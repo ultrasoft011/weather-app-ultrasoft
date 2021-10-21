@@ -95,6 +95,7 @@ app.get("/weather", (req, res) => {
         forecast: forecastData.forecast,
         latitude: forecastData.lat,
         longitude: forecastData.lon,
+        humidity: forecastData.humidity,
         location,
         address: req.query.address,
       })

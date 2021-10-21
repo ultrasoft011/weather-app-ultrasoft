@@ -28,10 +28,12 @@ const forecast = (x, y, callback) => {
     } else if (body.error) {
       callback("Unable to connect to the weatherstack", undefined);
     } else {
+      // To check the data comming
       // console.log(body);
       callback(undefined, {
         name: body.location.name,
         forecast: `Weather description: ${body.current.weather_descriptions} and the temperature is ${body.current.temperature}°C but it feels like ${body.current.feelslike}°C.`,
+        humidity: body.current.humidity,
         lon: body.location.lon,
         lat: body.location.lat,
         time: body.location.localtime,

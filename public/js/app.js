@@ -28,7 +28,7 @@ weatherForm.addEventListener("submit", function (e) {
         messageOne.textContent = data.error;
       } else {
         console.log(data);
-        messageOne.textContent = `Location: ${data.location}, the longitude is: ${data.longitude} and latitude: ${data.latitude}`;
+        messageOne.textContent = `Location: ${data.location}, the longitude is: ${data.longitude}, latitude: ${data.latitude} and humidity is ${data.humidity}`;
         messageTwo.textContent = `${data.forecast}`;
       }
     });
